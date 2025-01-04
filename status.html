@@ -1,113 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>آی تی ماهر - وضعیت</title>
     $(if refresh-timeout)
-    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)" />
     $(endif)
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"
+    />
 
     <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'> -->
 
     <!--<link rel="stylesheet" href="https://cdn.rawgit.com/rastikerdar/vazir-font/v19.0.0/dist/font-face.css">-->
-    <link rel="stylesheet" href="css/vazir-font/vazir-font.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/anim.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-    <link rel="manifest" href="img/fav/manifest.json">
-    <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#d55b5b">
-    <link rel="shortcut icon" href="img/fav/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="img/fav/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="msapplication-navbutton-color" content="#fb3449">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#fb3449">
+    <link rel="stylesheet" href="css/vazir-font/vazir-font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/anim.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/fav/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="img/fav/safari-pinned-tab.svg"
+      color="#d55b5b"
+    />
+    <link rel="shortcut icon" href="css/logo.svg" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-config" content="img/fav/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#fb3449" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fb3449" />
     <script language="JavaScript">
-        <!--
-        $(if advert-pending == 'yes')
-            var popup = '';
-        function focusAdvert() {
-            if (window.focus) popup.focus();
-        }
-        function openAdvert() {
-            popup = open('$(link-advert)', 'hotspot_advert', '');
-            setTimeout("focusAdvert()", 1000);
-        }
-        $(endif)
-        function openLogout() {
-            //if (window.name != 'hotspot_status') return true;
+      <!--
+      $(if advert-pending == 'yes')
+          var popup = '';
+      function focusAdvert() {
+          if (window.focus) popup.focus();
+      }
+      function openAdvert() {
+          popup = open('$(link-advert)', 'hotspot_advert', '');
+          setTimeout("focusAdvert()", 1000);
+      }
+      $(endif)
+      function openLogout() {
+          //if (window.name != 'hotspot_status') return true;
 
-            open('$(link-logout)', '_self', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
-            window.close();
-            return false;
-        }
-        //-->
+          open('$(link-logout)', '_self', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+          window.close();
+          return false;
+      }
+      //-->
     </script>
-</head>
+  </head>
 
-<body>
-$(if advert-pending == 'yes')
-onLoad="openAdvert()"
-$(endif)
-<div class="cont">
-    <div class="demo">
+  <body>
+    $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)
+    <div class="cont">
+      <div class="demo">
         <div class="app">
-            <div class="app__top">
-                <p class="app__hello">Welcome $(username) !</p>
-                <div class="app__user">
-                    <img src="css/user.png" alt="" class="app__user-photo"/>
-                </div>
+          <div class="app__top">
+            <p class="app__hello">Welcome $(username) !</p>
+            <div class="app__user">
+              <img src="css/user.png" alt="" class="app__user-photo" />
             </div>
-            <div class="app__bot">
-
-                <div class="app__meetings">
-                    <div class="app__meeting">
-                        <img src="ip.png" alt="" class="app__meeting-photo"/>
-                        <p class="app__meeting-name">آدرس IP</p>
-                        <p class="app__meeting-info">
-                            <span class="app__meeting-time">$(ip)</span>
-                        </p>
-                    </div>
-                    <div class="app__meeting">
-                        <img src="up.png" alt="" class="app__meeting-photo"/>
-                        <p class="app__meeting-name">دریافت / ارسال </p>
-                        <p class="app__meeting-info">
-                            <span class="app__meeting-time">$(bytes-in-nice) / $(bytes-out-nice)</span>
-                        </p>
-                    </div>
-                    <div class="app__meeting">
-                        <img src="time.png" alt="" class="app__meeting-photo"/>
-                        <p class="app__meeting-name">زمان سپری شده</p>
-                        <p class="app__meeting-info">
-                            <span class="app__meeting-time">$(uptime)</span>
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div class="app__bot">
+            <div class="app__meetings">
+              <div class="app__meeting">
+                <img src="ip.png" alt="" class="app__meeting-photo" />
+                <p class="app__meeting-name">آدرس IP</p>
+                <p class="app__meeting-info">
+                  <span class="app__meeting-time">$(ip)</span>
+                </p>
+              </div>
+              <div class="app__meeting">
+                <img src="up.png" alt="" class="app__meeting-photo" />
+                <p class="app__meeting-name">دریافت / ارسال</p>
+                <p class="app__meeting-info">
+                  <span class="app__meeting-time"
+                    >$(bytes-in-nice) / $(bytes-out-nice)</span
+                  >
+                </p>
+              </div>
+              <div class="app__meeting">
+                <img src="time.png" alt="" class="app__meeting-photo" />
+                <p class="app__meeting-name">زمان سپری شده</p>
+                <p class="app__meeting-info">
+                  <span class="app__meeting-time">$(uptime)</span>
+                </p>
+              </div>
             </div>
-            $(if login-by-mac != 'yes')
-            <div class="app__changepass">
-                <button type="button" onclick="window.location='changepassword.html'" id="loginButton" class="login__submit" style="margin-bottom:1rem;width: unset;padding: 5px;margin-top: 0px;">تغییر کلمه
-                    عبور
-                </button>
-            </div>
-            <div class="app__logout">
-                <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
-                    <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12"/>
-                </svg>
-            </div>
-            $(endif)
+          </div>
+          $(if login-by-mac != 'yes')
+          <div class="app__changepass">
+            <button
+              type="button"
+              onclick="window.location='changepassword.html'"
+              id="loginButton"
+              class="login__submit"
+              style="
+                margin-bottom: 1rem;
+                width: unset;
+                padding: 5px;
+                margin-top: 0px;
+              "
+            >
+              تغییر کلمه عبور
+            </button>
+          </div>
+          <div class="app__logout">
+            <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+              <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12" />
+            </svg>
+          </div>
+          $(endif)
         </div>
+      </div>
     </div>
-</div>
-<script src='js/jquery.min.js'></script>
-<script src="js/status.js"></script>
-<script src="js/bg.js"></script>
-
-</body>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/status.js"></script>
+    <script src="js/bg.js"></script>
+  </body>
 </html>
