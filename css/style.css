@@ -72,7 +72,7 @@ button {
   margin-left: -15rem;
   margin-top: -26.5rem;
   width: 35rem;
-  height: 53rem;
+  height: 45rem;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -80,8 +80,16 @@ button {
 .login {
   position: relative;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px);
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
 }
+/* .login__logo {
+  width: 100%;
+  height: 10rem;
+} */
 
 .login.inactive {
   opacity: 0;
@@ -90,25 +98,19 @@ button {
 }
 
 .login__check {
-  /*position: absolute;*/
-  /*  top: 16rem;
-      left: 13.5rem;*/
-  /*  width: 14rem;
-      height: 2.8rem;
-      background: #fff;*/
-  /* -webkit-transform-origin: 0 100%;
-             transform-origin: 0 100%;
-     -webkit-transform: rotate(-45deg);
-             transform: rotate(-45deg);*/
-  max-width: 140pt;
+  max-width: 200pt;
   float: none;
   margin: auto;
+  margin-top: 5rem;
+}
+.login__logo {
+  width: 100%;
 }
 
 .login__check:before {
   content: "";
   position: absolute;
-  /*left: 0;*/
+  /* left: 0; */
   bottom: 100%;
   /*  width: 2.8rem;
       height: 5.2rem;
@@ -148,19 +150,12 @@ button {
 .login__row {
   font-family: "Vazir";
   height: 5rem;
-  padding-top: 0.5rem;
-
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  -webkit-box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   margin-top: 0.75rem;
-  background-color: rgba(255, 255, 255, 0.514);
+  background-color: rgba(255, 255, 255, 1);
   color: #000;
+  border: 1px solid #B4B9C3;
 }
 
 .login__icon {
@@ -186,16 +181,19 @@ button {
 
 .login__input {
   display: inline-block;
-  width: 20rem;
+  width: 100%;
   height: 100%;
-  padding-right: 1.5rem;
+  padding: 0 1.7rem;
   font-size: 1.5rem;
   background: transparent;
-  color:rgb(247, 10, 10) ;
-  font-weight: bold;
   font-family: Vazir, Tahoma, "DejaVu Sans", helvetica, arial, freesans,
     sans-serif;
- 
+}
+
+.login__input::placeholder {
+  color: #B4B9C3;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 .phoneNumber{
@@ -236,19 +234,26 @@ button {
 .forget_button {
   position: relative;
   width: 80%;
-  height: 4rem;
-  margin: 0.5rem 0.5rem 0.5rem;
-  color: rgba(255, 255, 255, 0.8);
-  background: #ffad33;
+  margin: 1.75rem 0;
+  color: #909296;
+  background: transparent;
   font-size: 1.5rem;
+  font-weight: 100;
   border-radius: 3rem;
   cursor: pointer;
   overflow: hidden;
   transition: width 0.3s 0.15s, font-size 0.1s 0.15s;
 }
+.forget_button:hover {
+  color: black;
+  transition: all 0.5s ease;
+
+
+}
 .forget_button:after {
   content: "";
   position: absolute;
+  font-weight: 100;
   top: 50%;
   left: 50%;
   margin-left: -1.5rem;
@@ -271,16 +276,21 @@ cursor: not-allowed;
 
 .login__submit {
   position: relative;
-  width: 40%;
-  height: 4rem;
-  margin: 2rem 0.5rem 0.5rem;
-  color: rgba(255, 255, 255, 0.8);
-  background: #ff3366;
+  width: 100%;
+  height: 5rem;
+  margin-top: auto;
+  color: white;
+  background: #1E1E1E;
   font-size: 1.5rem;
-  border-radius: 3rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
   cursor: pointer;
   overflow: hidden;
   transition: width 0.3s 0.15s, font-size 0.1s 0.15s;
+}
+.login__submit:hover {
+  opacity: 0.9;
+  transition: all 0.5s ease;
 }
 
 .login__submit:after {
