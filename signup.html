@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>آی تی ماهر - ثبت نام</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/rastikerdar/vazir-font/v19.0.0/dist/font-face.css">-->
+    <link rel="stylesheet" href="css/vazir-font/vazir-font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anim.css">
+    <link rel="stylesheet" href="vendor/persian-datepicker/css/persian-datepicker.min.css">
+
+
+</head>
+
+
+<body>
+
+<div id="loader-wrapper">
+    <div id="loader-ajax"></div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+</div>
+
+
+<form name="sendin" id="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" id="usernameHOTS" name="username"/>
+    <input type="hidden" id="passwordHOTS" name="password"/>
+    <input type="hidden" name="dst" value="$(link-orig)"/>
+    <input type="hidden" name="popup" value="true"/>
+</form>
+
+<script type="text/javascript" src="/md5.js"></script>
+<script type="text/javascript">
+
+    function doLogin() {
+        // document.sendin.username.value = document.getElementById("username").value;
+        // document.sendin.password.value = hexMD5('$(chap-id)' + document.getElementById("pass").value + '$(chap-challenge)');
+        document.sendin.submit();
+        return false;
+    }
+
+</script>
+
+<div class="cont">
+    <div class="demo" style="top: 45%;height: 57rem;">
+        <div class="login">
+            <div class="login__check">
+                <div class="loader1 t" id="loader"><!-- <img class="" src="1.png"></img> --></div>
+                <div class="loader" id="loader2"></div>
+                <div class="loader" id="loader3"></div>
+                <div class="loader" id="loader4"></div>
+            </div>
+            <div class="login-error-box"></div>
+            <div class="login__form" style="top: 38% !important;">
+
+                <div class="login__row">
+                    <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+                        <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8"/>
+                    </svg>
+                    <input type="text" id="fullname" class="login__input name" placeholder="نام و نام خانوادگی"/>
+                </div>
+                <div class="login__row">
+                    <svg class="login__icon name svg-icon" style="margin-bottom: unset" viewBox="0 0 20 20">
+                        <path d="M0,25 20,25 20,8 0,8z M10,23 10,20z"/>
+                        <path d="M0,20 20,20 20,8 0,8z M10,23 10,20z"/>
+                    </svg>
+                    <input type="text" id="mobile" class="login__input pass" placeholder="شماره موبایل"/>
+                </div>
+                <div class="login__row  d-none" id="birthDateParent">
+                    <svg class="login__icon name svg-icon" style="margin-bottom: unset" viewBox="0 0 20 20">
+                        <path d="M0,25 20,25 20,8 0,8z M10,23 10,20z"/>
+                        <path d="M0,20 20,20 20,8 0,8z M10,23 10,20z"/>
+                    </svg>
+                    <input type="text" id="birthDate" class="login__input" placeholder="تاریخ تولد"/>
+                </div>
+                <div class="login__row d-none" id="NCParent">
+                    <svg class="login__icon name svg-icon" style="margin-bottom: unset" viewBox="0 0 20 20">
+                        <path d="M0,25 20,25 20,8 0,8z M10,23 10,20z"/>
+                        <path d="M0,20 20,20 20,8 0,8z M10,23 10,20z"/>
+                    </svg>
+                    <input type="text" id="NC" class="login__input " placeholder="کدملی"/>
+                </div>
+
+                <button type="button" id="signUpButton" class="login__submit"
+                        style="margin-bottom:1rem;background:#33FF9A;color:#fff">ثبت نام
+                </button>
+
+                <p class="login__signup">Powered By&nbsp;<a href="//itmaher.com" target="_blank">ITMaher</a></p> - <p
+                    class="login__signup">پشتیبانی شده توسط&nbsp;<a href="//itmaher.com" target="_blank">فناوری اطلاعات
+                ماهر</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div id="response-div"></div>
+<script src='js/jquery.min.js'></script>
+<script src="vendor/persian-datepicker/js/persian-datepicker.min.js"></script>
+<script src="vendor/persian-date/persian-date.min.js"></script>
+<script src='js/core.js'></script>
+<script src="js/signup.js"></script>
+
+
+</body>
+
+</html>
