@@ -53,7 +53,7 @@ button {
   position: relative;
   width: 100%;
   min-height: 100%;
-  background-image: url("slider-2.jpg");
+  background-image: url("bg/bg-desktop.light.jpg");
   background-size: cover;
   overflow: auto;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -71,32 +71,16 @@ button {
   left: 50%;
   margin-left: -15rem;
   margin-top: -26.5rem;
-  width: 30rem;
+  width: 35rem;
   height: 53rem;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-    rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .login {
   position: relative;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(227, 225, 233, 0.8) 0%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
-  transition: opacity 0.1s,
-    -webkit-transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
-  transition: opacity 0.1s,
-    transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
-  transition: opacity 0.1s,
-    transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25),
-    -webkit-transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .login.inactive {
