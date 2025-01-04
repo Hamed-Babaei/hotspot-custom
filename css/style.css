@@ -25,7 +25,6 @@ body {
 
 svg {
   display: inline-block;
-
   overflow: visible;
 }
 
@@ -290,6 +289,7 @@ cursor: not-allowed;
   cursor: pointer;
   overflow: hidden;
   transition: width 0.3s 0.15s, font-size 0.1s 0.15s;
+  padding: 0 2rem;
 }
 .login__submit:hover {
   opacity: 0.9;
@@ -372,10 +372,15 @@ cursor: not-allowed;
   transform: scale(1.2);
 }
 
+
 .app.active {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
+  background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px);
+  height: 50rem m !important;
+
 }
 
 .app.active .app__user-photo {
@@ -395,26 +400,22 @@ cursor: not-allowed;
 }
 
 .app__top {
-  position: relative;
-  height: 28rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 6rem 1.5rem 2rem;
   text-align: center;
-}
-
-.app__bot {
-  position: relative;
-  height: 25rem;
-  background: #fff;
 }
 
 .app__menu-btn {
   position: absolute;
-  top: 2rem;
+  top: 20rem;
   left: 1.5rem;
   width: 1.8rem;
   height: 1.7rem;
   cursor: pointer;
+}
+
+.card__btn {
+  display: flex ;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .app__menu-btn span,
@@ -466,7 +467,7 @@ cursor: not-allowed;
   display: inline-block;
   width: 14rem;
   height: 14rem;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 
 .app__user-photo {
@@ -556,16 +557,19 @@ cursor: not-allowed;
 }
 
 .app__meeting {
-  position: relative;
   height: 6rem;
-  border-top: 1px solid #eeeeef;
-  padding: 1rem 7.5rem 1rem 2rem;
+  border-bottom: 1px solid #eeeeef;
+  padding: 1rem 2rem 1rem 2rem;
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   opacity: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .app__meeting:nth-child(1) {
@@ -599,7 +603,8 @@ cursor: not-allowed;
 .app__meeting-name {
   direction: rtl;
   color: #000;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 500;
   text-align: right;
 }
 
@@ -627,14 +632,28 @@ cursor: not-allowed;
   /*-webkit-transform: scale(0);*/
   /*transform: scale(0);*/
 }
+.app__changepass-logout {
+  position: absolute;
+  bottom: 3.3rem;
+  left: 5.3rem;
+  height: 4.6rem;
+  margin-left: -2.3rem;
+  margin-bottom: -2.3rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.app__changepass-logout:hover {
+ opacity: 0.9;
+  transition: all 0.5s ease;
+}
 .app__logout {
   position: absolute;
   bottom: 3.3rem;
   left: 3.3rem;
-  width: 4.6rem;
+  /* width: 4.6rem; */
   height: 4.6rem;
-  margin-right: -2.3rem;
-  margin-bottom: -2.3rem;
+  /* margin-right: -2.3rem; */
+  /* margin-bottom: -2.3rem; */
   background: #fc3768;
   color: #fff;
   font-size: 2rem;
@@ -781,4 +800,14 @@ h3 {
 
 .pb-5 {
   margin-bottom: 6rem;
+}
+.glass-bg {
+  background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% 100%;
 }

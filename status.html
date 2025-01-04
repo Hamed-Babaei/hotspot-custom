@@ -18,29 +18,7 @@
     <link rel="stylesheet" href="css/vazir-font/vazir-font.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/anim.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/fav/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/fav/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/fav/favicon-16x16.png"
-    />
-    <link rel="manifest" href="img/fav/manifest.json" />
-    <link
-      rel="mask-icon"
-      href="img/fav/safari-pinned-tab.svg"
-      color="#d55b5b"
-    />
+
     <link rel="shortcut icon" href="css/logo.svg" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-config" content="img/fav/browserconfig.xml" />
@@ -76,7 +54,7 @@
       <div class="demo">
         <div class="app">
           <div class="app__top">
-            <p class="app__hello">Welcome $(username) !</p>
+            <!-- <p class="app__hello">Welcome $(username) !</p> -->
             <div class="app__user">
               <img src="css/logo.svg" alt="" class="app__user-photo" />
             </div>
@@ -90,44 +68,54 @@
                 </p>
               </div>
               <div class="app__meeting">
-                <p class="app__meeting-name">دریافت / ارسال</p>
+                <p class="app__meeting-name">آپلود</p>
                 <p class="app__meeting-info">
-                  <span class="app__meeting-time"
-                    >$(bytes-in-nice) / $(bytes-out-nice)</span
-                  >
+                  <span class="app__meeting-time">$(bytes-in-nice)</span>
                 </p>
               </div>
               <div class="app__meeting">
-                <p class="app__meeting-name">زمان سپری شده</p>
+                <p class="app__meeting-name">دانلود</p>
+                <p class="app__meeting-info">
+                  <span class="app__meeting-time">$(bytes-out-nice)</span>
+                </p>
+              </div>
+              <div class="app__meeting">
+                <p class="app__meeting-name">مدت زمان اتصال</p>
                 <p class="app__meeting-info">
                   <span class="app__meeting-time">$(uptime)</span>
                 </p>
               </div>
+              <div class="">
+                $(if login-by-mac != 'yes')
+                <div class="app__changepass-logout">
+                  <button
+                  type="button"
+                  onclick="window.location='changepassword.html'"
+                  id="loginButton"
+                  class="login__submit"
+                  style="background-color: red;"
+                >
+                  خروج از حساب
+                </button>
+                </div>
+                <div class="app__changepass">
+                  <button
+                    type="button"
+                    onclick="window.location='changepassword.html'"
+                    id="loginButton"
+                    class="login__submit"
+                  >
+                    تغییر کلمه عبور
+                  </button>
+                </div>
+               
+           
+                 
+                </
+                $(endif)
+              </div>
             </div>
           </div>
-          $(if login-by-mac != 'yes')
-          <div class="app__changepass">
-            <button
-              type="button"
-              onclick="window.location='changepassword.html'"
-              id="loginButton"
-              class="login__submit"
-              style="
-                margin-bottom: 1rem;
-                width: unset;
-                padding: 5px;
-                margin-top: 0px;
-              "
-            >
-              تغییر کلمه عبور
-            </button>
-          </div>
-          <div class="app__logout">
-            <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
-              <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12" />
-            </svg>
-          </div>
-          $(endif)
         </div>
       </div>
     </div>
