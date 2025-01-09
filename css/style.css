@@ -69,10 +69,7 @@ button {
 
 .demo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -15rem;
-  margin-top: -26.5rem;
+  
   width: 35rem;
   height: 45rem;
   overflow: hidden;
@@ -101,10 +98,14 @@ button {
 }
 
 .login__check {
-  max-width: 200pt;
+
+  width: 250px !important;
   float: none;
   margin: auto;
   margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .login__logo {
   width: 100%;
@@ -131,9 +132,7 @@ button {
 }
 .logedin__form {
   direction: rtl;
-  position: absolute;
-  top: 35%;
-  left: 0;
+
   width: 100%;
   height: fit-content;
   max-height: 50%;
@@ -143,12 +142,12 @@ button {
 .login__form {
   direction: rtl;
   position: absolute;
-  top: 40%;
+
   left: 0;
   width: 100%;
   height: 50%;
   padding: 1.5rem 2.5rem;
-  text-align: center;
+
 }
 
 .login__row {
@@ -560,7 +559,7 @@ cursor: not-allowed;
 }
 
 .app__meeting {
-  height: 6rem;
+  height: 5rem;
   border-bottom: 1px solid #eeeeef;
   padding: 1rem 2rem 1rem 2rem;
   transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -674,7 +673,7 @@ cursor: not-allowed;
   font-size: 2rem;
   border-radius: 50%;
   cursor: pointer;
-  margin-top: 0.8rem;
+  margin-top: 3.9rem;
 }
 
 .app__logout.clicked {
