@@ -65,41 +65,26 @@
     $(endif)
     <div class="cont relative">
       <div class="demo animate-fadeDown to-top">
-        <div class="login">
-          <div class="login__check sm:mt-10 flex items-center justify-center">
+        <div class="login relative">
+          <div class="login__check sm:mt-5 flex items-center justify-center">
             <!-- / -->
             <img
               src="css/icon.svg"
               alt="آی تی ماهر"
-              class="login__logo w-[17rem]"
+              class="login__logo w-[17rem] h-[8rem]"
             />
           </div>
 
           <div class="login__form">
-            <div class="flex flex-col-reverse w-full">
-              <input
-                placeholder="نام کاربری"
-                class="peer outline-none px-4 py-2 h-[4.5rem] border-0 rounded-lg duration-500 relative placeholder:duration-500 placeholder:absolute focus:placeholder:pt-10 text-[16px] sm:text-[12px] focus:rounded-md focus:ring-black placeholder:text-black-100/10"
-                type="text"
-                id="username"
-              />
-              <span
-                class="duration-500 opacity-0 -mb-1 ps-2 peer-focus:opacity-100 text-base-500 text-[16px] sm:text-[12px] -translate-y-16 peer-focus:translate-y-0"
-                >نام کاربری</span
-              >
+            <div class="inputGroup w-full">
+              <input type="text" required="" autocomplete="off" />
+              <label for="username" type="text" id="username">نام کاربری</label>
             </div>
-            <div class="flex flex-col-reverse w-full">
-              <input
-                placeholder="کلمه عبور"
-                class="peer outline-none px-4 py-1 h-[4.5rem] border-0 rounded-lg duration-500 relative placeholder:duration-500 placeholder:absolute focus:placeholder:pt-10 text-[16px] sm:text-[12px] focus:rounded-md focus:ring-black placeholder:text-black-100/10 pass"
-                type="password"
-                id="pass"
-              />
-              <span
-                class="duration-500 opacity-0 -mb-1 ps-2 peer-focus:opacity-100 text-base-500 text-[16px] sm:text-[12px] -translate-y-12 peer-focus:translate-y-0"
-                >کلمه عبور</span
-              >
+            <div class="inputGroup w-full">
+              <input type="text" required="" autocomplete="off" />
+              <label for="username" type="text" id="pass">نام کاربری</label>
             </div>
+
             $(if error)<br />
             <div
               style="width: 100%; font-size: 16px; text-align: center"
@@ -120,48 +105,48 @@
             </button>
           </div>
         </div>
-      </div>
-      <!-- Start Header -->
-      <div
-        class="login__header bg-white absolute bottom-[19%] sm:bottom-[22%] w-full max-w-[35rem] roundend-md flex items-center justify-between p-4 animate-fadeInRight"
-      >
-        <div class="login__header-right flex items-center roundend-md gap-2">
-          <button title="بازگشت" onclick="window.history.back()">
-            <span
-              class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
-            >
-              <img src="css/assets/arrow-left.svg" alt="" class="w-10" />
-            </span>
-          </button>
-          <button title="تغییر رنگ">
-            <span
-              class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
-            >
-              <img src="css/assets/theme.svg" alt="" class="w-10 pt-1" />
-            </span>
-          </button>
-          <button title="تماس با پشتیبانی">
-            <span
-              class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
-            >
-              <img src="css/assets/phone.svg" alt="" class="w-8 flex" />
-            </span>
-          </button>
-        </div>
+        <!-- Start Header -->
         <div
-          class="login__header-right flex items-center justify-center w-[50px] h-[50px] roundend-md flex items-center justify-center cursor-pointer"
+          class="login__header bg-white absolute -bottom-[10rem] w-full max-w-[35rem] roundend-md flex items-center justify-between p-4 animate-fadeInRight"
         >
-          <button class="w-full h-full">
-            <span
-              onclick=""
-              class="text-xl font-bold bg-white rounded-lg w-full h-full flex items-center justify-center"
-            >
-              EN
-            </span>
-          </button>
+          <div class="login__header-right flex items-center roundend-md gap-2">
+            <button title="بازگشت" onclick="window.history.back()">
+              <span
+                class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
+              >
+                <img src="css/assets/arrow-left.svg" alt="" class="w-10" />
+              </span>
+            </button>
+            <button title="تغییر رنگ">
+              <span
+                class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
+              >
+                <img src="css/assets/theme.svg" alt="" class="w-10 pt-1" />
+              </span>
+            </button>
+            <button title="تماس با پشتیبانی">
+              <span
+                class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
+              >
+                <img src="css/assets/phone.svg" alt="" class="w-8 flex" />
+              </span>
+            </button>
+          </div>
+          <div
+            class="login__header-right flex items-center justify-center w-[50px] h-[50px] roundend-md flex items-center justify-center cursor-pointer"
+          >
+            <button class="w-full h-full">
+              <span
+                onclick=""
+                class="text-xl font-bold bg-white rounded-lg w-full h-full flex items-center justify-center"
+              >
+                EN
+              </span>
+            </button>
+          </div>
         </div>
+        <!-- End Header -->
       </div>
-      <!-- End Header -->
 
       <!-- Start Footer -->
       <div

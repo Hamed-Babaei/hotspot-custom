@@ -70,8 +70,9 @@ button {
 .demo {
   position: absolute;
   width: 35rem;
-  height: 45rem;
-  overflow: hidden;
+  height: 42rem;
+  max-width: 45rem;
+  /* overflow: hidden; */
   border-radius: 10px;
 
 }
@@ -119,14 +120,15 @@ width: 50px !important;
   margin-bottom: 0rem;
 }
 
-@media (max-height: 800px) {
+@media (max-height: 601px) {
   .login__header {
-    bottom: 11%;
+    bottom: -19% !important; 
   }
   .to-top {
-    margin-bottom: 13rem;
+    margin-bottom: 10rem;
   }
-}
+} 
+
 
 
 .login.inactive {
@@ -276,7 +278,7 @@ width: 50px !important;
 .forget_button {
   position: relative;
   width: 80%;
-  margin: 1.75rem 0;
+  margin: 1rem 0;
   color: #909296;
   background: transparent;
   font-size: 1.5rem;
@@ -855,4 +857,47 @@ h3 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: 100% 100%;
+}
+/* / input / */
+/* From Uiverse.io by Maximinodotpy */ 
+.inputGroup {
+  margin-top: 1em;
+  position: relative;
+  direction: rtl;
+  font-size: 14px;
+
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200 );
+  background-color: white;
+  border-radius: 10px !important;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  right: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: black;
+  font-weight: 500;
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+  transform: translateY(-60%) scale(.9);
+  margin: 0em;
+  margin-right: 0.5rem;
+  padding: 0.4em;
+
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(163, 163, 179);
 }
