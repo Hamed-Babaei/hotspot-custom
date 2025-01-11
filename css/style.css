@@ -115,10 +115,16 @@ button {
 .footer-container img {
 width: 50px !important;
 }
+.to-top {
+  margin-bottom: 0rem;
+}
 
 @media (max-height: 800px) {
   .login__header {
     bottom: 11%;
+  }
+  .to-top {
+    margin-bottom: 13rem;
   }
 }
 
