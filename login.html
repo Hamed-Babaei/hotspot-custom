@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/anim.css" />
     <link rel="stylesheet" href="css/logo.css" />
     <link rel="shortcut icon" href="css/logo.svg" />
+    <script src="cdn.text"></script>
+    <script src="tailwindcss.config.js"></script>
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-config" content="img/fav/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
@@ -59,7 +61,7 @@
       }
     </script>
     $(endif)
-    <div class="cont">
+    <div class="cont relative">
       <div class="demo animate-fadeDown">
         <div class="login">
           <div class="login__check sm:mt-10 flex items-center justify-center">
@@ -117,13 +119,69 @@
           </div>
         </div>
       </div>
+      <!-- Start Header -->
+      <div
+        class="login__header bg-white absolute bottom-[19%] sm:bottom-[22%] w-full max-w-[35rem] roundend-md flex items-center justify-between p-4 animate-fadeInRight"
+      >
+        <div class="login__header-right flex items-center roundend-md gap-2">
+          <button title="بازگشت" onclick="window.history.back()">
+            <span
+              class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
+            >
+              <img src="css/assets/arrow-left.svg" alt="" class="w-10" />
+            </span>
+          </button>
+          <button title="تغییر رنگ">
+            <span
+              class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
+            >
+              <img src="css/assets/theme.svg" alt="" class="w-10 pt-1" />
+            </span>
+          </button>
+          <button title="تماس با پشتیبانی">
+            <span
+              class="text-xl font-bold w-[50px] h-[50px] flex item-center justify-center bg-white rounded-lg cursor-pointer"
+            >
+              <img src="css/assets/phone.svg" alt="" class="w-8 flex" />
+            </span>
+          </button>
+        </div>
+        <div
+          class="login__header-right flex items-center justify-center w-[50px] h-[50px] roundend-md flex items-center justify-center cursor-pointer"
+        >
+          <button class="w-full h-full">
+            <span
+              onclick=""
+              class="text-xl font-bold bg-white rounded-lg w-full h-full flex items-center justify-center"
+            >
+              EN
+            </span>
+          </button>
+        </div>
+      </div>
+      <!-- End Header -->
+
+      <!-- Start Footer -->
+      <div
+        class="fixed bottom-3 w-full flex justify-center items-center gap-1 animate-fadeInLeft"
+      >
+        <span class="text-2xl"
+          >تحقیق و توسعه توسط
+          <a href="https://sorayya.co.com" class="font-bold"
+            >شرکت فناوربنیان ثریا</a
+          ></span
+        >
+        <span class="text-3xl">|</span>
+        <a href="https://sorayya.co.com" class="animate-fadeInRight">
+          <img src="css/logo.svg" alt="logo" class="w-22 h-12" />
+        </a>
+      </div>
+      <!-- End Footer -->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/core.js"></script>
     <script src="js/login.js"></script>
-    <script src="js/bg.js"></script>
-    <script src="cdn.text"></script>
-    <script src="tailwindcss.config.js"></script>
+
     <script src="toastHandler.js" type="module" defer></script>
   </body>
 </html>
