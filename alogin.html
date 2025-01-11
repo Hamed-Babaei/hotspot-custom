@@ -11,30 +11,15 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/anim.css" />
     <link rel="stylesheet" href="css/logo.css" />
+    <script src="cdn.text"></script>
+    <script src="tailwindcss.config.js"></script>
+    <script src="toastHandler.js" type="module" defer></script>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/fav/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/fav/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/fav/favicon-16x16.png"
-    />
-    <link rel="manifest" href="img/fav/manifest.json" />
-    <link
-      rel="mask-icon"
-      href="img/fav/safari-pinned-tab.svg"
-      color="#d55b5b"
-    />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+
     <link rel="shortcut icon" href="css/logo.svg" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-config" content="img/fav/browserconfig.xml" />
@@ -60,17 +45,21 @@
 
   <body onLoad="startClock()">
     <div class="cont">
-      <div class="demo">
+      <div class="demo animate-fadeDown">
         <div class="login h-auto">
           <div class="login__check">
-            <img
-              src="css/assets/success.svg"
-              alt="logo"
-              class="w-[8rem] h-[8rem]"
-            />
+            <dotlottie-player
+              src="https://lottie.host/8d61888b-70b4-4b8d-855e-4ef5560c4164/ifKjTQUHcN.lottie"
+              background="transparent"
+              speed="0.5"
+              autoplay
+              class="w-[20rem] h-[20rem]"
+            ></dotlottie-player>
           </div>
           <div class="logedin__form">
-            <h3 class="mt-16">درود،شما به دنیای وای های وارد شدید!</h3>
+            <h3 class="mt-16 font-bold text-[30px]">
+              درود،شما به دنیای وای های وارد شدید!
+            </h3>
           </div>
         </div>
       </div>

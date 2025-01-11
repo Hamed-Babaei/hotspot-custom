@@ -116,6 +116,13 @@ button {
 width: 50px !important;
 }
 
+@media (max-height: 800px) {
+  .login__header {
+    bottom: 11%;
+  }
+}
+
+
 .login.inactive {
   opacity: 0;
   -webkit-transform: scale(1.1);
