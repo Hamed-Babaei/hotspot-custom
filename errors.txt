@@ -71,7 +71,7 @@ chap-missing = web browser did not send challenge response (try again, enable Ja
 # has sent an error string with Access-Reject message, then it will
 # override this setting.
 
-invalid-username = نام کاربری یا کلمه عبور صحیحی نمی باشد
+invalid-username = نام کاربری یا کلمه عبور صحیح نمی باشد
 
 # invalid-mac
 # Local users (on hotspot server) can be bound to some MAC address. If login

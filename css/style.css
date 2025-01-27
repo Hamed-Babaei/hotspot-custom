@@ -651,7 +651,7 @@ cursor: not-allowed;
 }
 
 .app__meeting-info {
-  color: #949498;
+  color: #000;
   font-size: 1.1rem;
   text-align: right;
 }
@@ -707,13 +707,6 @@ cursor: not-allowed;
   transform: scale(0);
 }
 .app__logout-btn {
-  width: 100% !important;
-  height: 4.6rem;
-  color: #fff;
-  font-size: 2rem;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-top: 3.9rem;
 }
 
 .app__logout.clicked {
