@@ -356,7 +356,7 @@ cursor: not-allowed;
 }
 
 .login__submit.processing {
-  width: 4rem;
+  /* width: 4rem; */
   font-size: 0;
 }
 

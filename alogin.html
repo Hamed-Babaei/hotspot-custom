@@ -37,7 +37,9 @@
       	$(if popup == 'true')
       	open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
       $(endif)
-      location.href = unescape('$(link-redirect-esc)');
+      setTimeout(() => {
+        location.href = unescape('$(link-redirect-esc)');
+      } , 1000)
       }
       //-->
     </script>
@@ -48,13 +50,7 @@
       <div class="demo animate-fadeDown">
         <div class="login h-auto">
           <div class="login__check">
-            <dotlottie-player
-              src="https://lottie.host/8d61888b-70b4-4b8d-855e-4ef5560c4164/ifKjTQUHcN.lottie"
-              background="transparent"
-              speed="0.5"
-              autoplay
-              class="w-[20rem] h-[20rem]"
-            ></dotlottie-player>
+            <img src="./css/assets/success.svg" alt="icon" class="" />
           </div>
           <div class="logedin__form">
             <h3 class="mt-16 font-bold text-[30px]">
