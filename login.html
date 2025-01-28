@@ -21,22 +21,6 @@
     <meta name="theme-color" content="#ffffff" />
     <meta name="msapplication-navbutton-color" content="#fb3449" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#fb3449" />
-    <script type="module">
-      import { showToast, showLoading, hideLoading } from "./toastHandler.js";
-      document.addEventListener("DOMContentLoaded", () => {
-        const showToastButton = document.getElementById("show-toast");
-
-        showToastButton.addEventListener("click", () => {});
-      });
-
-      window.handleButtonClick = (buttonId) => {
-        showToast("toast");
-        showLoading("show-toast");
-        setTimeout(() => {
-          hideLoading("show-toast");
-        }, 5000);
-      };
-    </script>
   </head>
 
   <body class="bg-bg-light sm:bg-bg-light-mobile">
